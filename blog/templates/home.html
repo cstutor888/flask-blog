@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+{% for post in posts %}
+
+
+<p class="ex1">
+	
+	<a href="{{ url_for('post', post_id=post.id) }}">
+  "{{ post.title }}"</a> &nbsp
+  by {{ post.user.username }}
+<div >
+  <img src="{{ url_for('static', filename='img/' + post.image_file) }} " style="padding-left: 20px; padding-bottom: 10px;">
+</div>
+</p>
+
+<p class="ex1">{{ post.content }}</p>
+{% endfor %}
+{% endblock content %}
