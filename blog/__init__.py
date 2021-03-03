@@ -6,7 +6,7 @@ from flask_admin.contrib.sqla import ModelView
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'c87370a82cce712cb31b8abcf9962b56dd263592bea9190f'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://c2096398:Tong881205..@csmysql.cs.cf.ac.uk:3306/c2096398_c2096398_flask'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql'
 app.run(debug=True)
 db = SQLAlchemy(app)
 login_manager = LoginManager()
